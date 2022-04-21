@@ -8577,8 +8577,6 @@ local tbl =
 	}, 
 	inheritedProfiles = 
 	{
-		"anyone\\sharedsavage",
-		"anyone\\sharedultimate",
 	},
 }
 
