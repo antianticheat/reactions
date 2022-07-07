@@ -4,81 +4,11 @@ local tbl =
 	{
 		data = 
 		{
-			name = "--UCOB",
-			uuid = "2468a519-cb13-9e1a-bb9f-fc22b014d468",
-			version = 2,
-		},
-		inheritedIndex = 9,
-		inheritedObjectUUID = "ab2ba1e5-3588-e013-a374-6dcac4899bd8",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "UCoB draws",
-			uuid = "fa31586f-4493-63a1-be64-b850bb0b36ec",
-			version = 2,
-		},
-		inheritedIndex = 10,
-		inheritedObjectUUID = "eefa7bbd-2ced-e0ef-833a-6ece8da17af1",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "Draw quotes",
-			uuid = "336d326e-1a7a-bb86-8f93-3fe16423dae9",
-			version = 2,
-		},
-		inheritedIndex = 11,
-		inheritedObjectUUID = "79d07751-0776-e532-a750-6421eeb9169b",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "Marker Reactions",
-			uuid = "71871b73-3418-54df-8bcb-c67faa9cb025",
-			version = 2,
-		},
-		inheritedIndex = 12,
-		inheritedObjectUUID = "95c88b0b-7bd5-c34b-acc7-a6ec9ec6d70a",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "Channel Reactions",
-			uuid = "0385a58f-fa58-c397-ae3a-ecf776ad9b8b",
-			version = 2,
-		},
-		inheritedIndex = 13,
-		inheritedObjectUUID = "18e6def3-7035-6610-b991-ec788d1c73aa",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
 			name = "--TEA",
 			uuid = "4f72dcc6-4836-34dc-8934-99f76e045db2",
 			version = 2,
 		},
-		inheritedIndex = 14,
+		inheritedIndex = 3,
 		inheritedObjectUUID = "194a6e42-e70e-a692-b01e-0adb00f30f86",
 		inheritedOverwrites = 
 		{
@@ -92,8 +22,92 @@ local tbl =
 			uuid = "8d12e37b-4424-530a-b2ae-05f57610dedc",
 			version = 2,
 		},
-		inheritedIndex = 20,
+		inheritedIndex = 7,
 		inheritedObjectUUID = "819d26bf-6119-260d-8bc9-33d8b0189ed4",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "UwU draws",
+			uuid = "4b9929b5-7d82-ca7c-b1f7-e8bb6d08a641",
+			version = 2,
+		},
+		inheritedIndex = 9,
+		inheritedObjectUUID = "3f1d469c-639a-e2f6-8bf4-4a58abf0b185",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "--UCOB",
+			uuid = "2468a519-cb13-9e1a-bb9f-fc22b014d468",
+			version = 2,
+		},
+		inheritedIndex = 10,
+		inheritedObjectUUID = "ab2ba1e5-3588-e013-a374-6dcac4899bd8",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "UCoB draws",
+			uuid = "fa31586f-4493-63a1-be64-b850bb0b36ec",
+			version = 2,
+		},
+		inheritedIndex = 11,
+		inheritedObjectUUID = "eefa7bbd-2ced-e0ef-833a-6ece8da17af1",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Draw quotes",
+			uuid = "336d326e-1a7a-bb86-8f93-3fe16423dae9",
+			version = 2,
+		},
+		inheritedIndex = 12,
+		inheritedObjectUUID = "79d07751-0776-e532-a750-6421eeb9169b",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Marker Reactions",
+			uuid = "71871b73-3418-54df-8bcb-c67faa9cb025",
+			version = 2,
+		},
+		inheritedIndex = 13,
+		inheritedObjectUUID = "95c88b0b-7bd5-c34b-acc7-a6ec9ec6d70a",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Channel Reactions",
+			uuid = "0385a58f-fa58-c397-ae3a-ecf776ad9b8b",
+			version = 2,
+		},
+		inheritedIndex = 14,
+		inheritedObjectUUID = "18e6def3-7035-6610-b991-ec788d1c73aa",
 		inheritedOverwrites = 
 		{
 		},
@@ -124,6 +138,43 @@ local tbl =
 		inheritedObjectUUID = "5b15d2e7-a953-542c-b3c3-945c374dd5d1",
 		inheritedOverwrites = 
 		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Multitool",
+			uuid = "49b82326-95d3-e267-9251-678d241d7f3c",
+			version = 2,
+		},
+		inheritedIndex = 32,
+		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
+		inheritedOverwrites = 
+		{
+			actions = 
+			{
+				
+				{
+					type = "add",
+					value = 
+					{
+						data = 
+						{
+							name = "",
+							uuid = "30858dff-72b6-65d0-a405-f15647947328",
+							version = 2,
+						},
+						inheritedObjectUUID = "69b3d0f1-9d83-ac26-92f3-ac34f600f8ee",
+						inheritedOverwrites = 
+						{
+							aType = "Variable",
+							gVar = "ACR_RikuSCH2_Hotbar_Surecast",
+							variableIsHover = false,
+						},
+					},
+				},
+			},
 		},
 	},
 	
@@ -742,43 +793,6 @@ local tbl =
 	{
 		data = 
 		{
-			name = "Multitool",
-			uuid = "49b82326-95d3-e267-9251-678d241d7f3c",
-			version = 2,
-		},
-		inheritedIndex = 32,
-		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
-		inheritedOverwrites = 
-		{
-			actions = 
-			{
-				
-				{
-					type = "add",
-					value = 
-					{
-						data = 
-						{
-							name = "",
-							uuid = "30858dff-72b6-65d0-a405-f15647947328",
-							version = 2,
-						},
-						inheritedObjectUUID = "69b3d0f1-9d83-ac26-92f3-ac34f600f8ee",
-						inheritedOverwrites = 
-						{
-							aType = "Variable",
-							gVar = "ACR_RikuSCH2_Hotbar_Surecast",
-							variableIsHover = false,
-						},
-					},
-				},
-			},
-		},
-	},
-	
-	{
-		data = 
-		{
 			actions = 
 			{
 			},
@@ -807,7 +821,7 @@ local tbl =
 			uuid = "196f3e88-a90e-1ce3-b8b0-974fc7ea9b64",
 			version = 2,
 		},
-		inheritedIndex = 33,
+		inheritedIndex = 22,
 		inheritedObjectUUID = "",
 	},
 	
@@ -1958,7 +1972,7 @@ local tbl =
 						clusterRadius = 8,
 						clusterRange = 30,
 						comparator = 1,
-						conditionLua = "return Argus ~= nil and AnyoneCore.inUnavoidableAOE(TensorCore.mGetPlayer().id)",
+						conditionLua = "return AnyoneCore.AOEMitigation[eventArgs.spellID] == true",
 						conditionType = 1,
 						conditions = 
 						{
@@ -2003,7 +2017,7 @@ local tbl =
 						minTargetPercent = false,
 						mpType = 1,
 						mpValue = 0,
-						name = "unavoidable aoe",
+						name = "check aoe mitigation table",
 						partyTargetContentID = -1,
 						partyTargetName = "",
 						partyTargetNumber = 1,
@@ -6536,7 +6550,7 @@ local tbl =
 			uuid = "889e931b-f60f-e42b-9978-49b8e9526e8d",
 			version = 2,
 		},
-		inheritedIndex = 35,
+		inheritedIndex = 24,
 		inheritedObjectUUID = "",
 	},
 	
@@ -6558,7 +6572,7 @@ local tbl =
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
 			mechanicTime = 0,
-			name = "v4.0.9.2",
+			name = "v4.0.9.9",
 			randomOffset = 0,
 			throttleTime = 0,
 			timeRandomRange = false,
@@ -6571,7 +6585,7 @@ local tbl =
 			uuid = "591aa599-4629-bc2a-9ff3-5f836a4b93da",
 			version = 2,
 		},
-		inheritedIndex = 36,
+		inheritedIndex = 25,
 		inheritedObjectUUID = "",
 	}, 
 	inheritedProfiles = 

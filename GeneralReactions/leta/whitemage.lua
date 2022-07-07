@@ -8,7 +8,7 @@ local tbl =
 			uuid = "39f60417-9bf9-06fd-b380-18fafc93bee3",
 			version = 2,
 		},
-		inheritedIndex = 16,
+		inheritedIndex = 10,
 		inheritedObjectUUID = "eefa7bbd-2ced-e0ef-833a-6ece8da17af1",
 		inheritedOverwrites = 
 		{
@@ -26,6 +26,42 @@ local tbl =
 		inheritedObjectUUID = "dcec4734-df1d-e575-90af-afd363c2a735",
 		inheritedOverwrites = 
 		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Multitool",
+			uuid = "62815923-9540-1e5e-8ad5-18ef1047f6af",
+			version = 2,
+		},
+		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
+		inheritedOverwrites = 
+		{
+			actions = 
+			{
+				
+				{
+					type = "add",
+					value = 
+					{
+						data = 
+						{
+							name = "",
+							uuid = "88c756be-144a-c358-973c-3b6b9939b857",
+							version = 2,
+						},
+						inheritedObjectUUID = "69b3d0f1-9d83-ac26-92f3-ac34f600f8ee",
+						inheritedOverwrites = 
+						{
+							aType = "Variable",
+							gVar = "ACR_RikuWHM2_Hotbar_Surecast",
+							variableIsHover = false,
+						},
+					},
+				},
+			},
 		},
 	},
 	
@@ -636,42 +672,6 @@ local tbl =
 	{
 		data = 
 		{
-			name = "Multitool",
-			uuid = "62815923-9540-1e5e-8ad5-18ef1047f6af",
-			version = 2,
-		},
-		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
-		inheritedOverwrites = 
-		{
-			actions = 
-			{
-				
-				{
-					type = "add",
-					value = 
-					{
-						data = 
-						{
-							name = "",
-							uuid = "88c756be-144a-c358-973c-3b6b9939b857",
-							version = 2,
-						},
-						inheritedObjectUUID = "69b3d0f1-9d83-ac26-92f3-ac34f600f8ee",
-						inheritedOverwrites = 
-						{
-							aType = "Variable",
-							gVar = "ACR_RikuWHM2_Hotbar_Surecast",
-							variableIsHover = false,
-						},
-					},
-				},
-			},
-		},
-	},
-	
-	{
-		data = 
-		{
 			actions = 
 			{
 			},
@@ -923,6 +923,76 @@ local tbl =
 					data = 
 					{
 						aType = "Variable",
+						actionID = -1,
+						actionLua = "",
+						allowInterrupt = false,
+						atomicPriority = false,
+						castAtMouse = false,
+						castPosX = 0,
+						castPosY = 0,
+						castPosZ = 0,
+						clusterMinPercent = false,
+						clusterMinTarget = 1,
+						clusterRadius = 8,
+						clusterRange = 30,
+						conditions = 
+						{
+							
+							{
+								"285098cb-d656-1f34-ad23-84d0d07e869c",
+								true,
+							},
+							
+							{
+								"94699a84-6d60-1bd5-b5be-4817bdb9a57b",
+								true,
+							},
+							
+							{
+								"d5ec6b6d-d2ba-8f0b-86c6-c9715be2f9bc",
+								true,
+							},
+						},
+						endIfUsed = true,
+						fallthrough = true,
+						gVar = "ACR_RikuWHM2_Hotbar_ThinAir",
+						gVarValue = 1,
+						ignoreWeaveRules = false,
+						isAreaTarget = false,
+						luaNeedsWeaveWindow = false,
+						luaReturnsAction = false,
+						name = "",
+						potType = 1,
+						setTarget = false,
+						showPositionPreview = false,
+						stopCasting = false,
+						stopMoving = false,
+						targetContentID = -1,
+						targetName = "",
+						targetSubType = "Nearest",
+						targetType = "Self",
+						untarget = false,
+						useForWeaving = false,
+						useItem = false,
+						useItemID = 0,
+						useItemName = "",
+						usePot = false,
+						uuid = "dd105896-673c-bd59-adff-f7bb10e636ff",
+						variableIsHover = false,
+						variableTogglesType = 2,
+						version = 2,
+					},
+					inheritedIndex = 4,
+					inheritedObjectUUID = "",
+					inheritedOverwrites = 
+					{
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Variable",
 						actionID = 133,
 						actionLua = "",
 						allowInterrupt = false,
@@ -1048,6 +1118,76 @@ local tbl =
 						version = 2,
 					},
 					inheritedIndex = 5,
+					inheritedObjectUUID = "",
+					inheritedOverwrites = 
+					{
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Variable",
+						actionID = -1,
+						actionLua = "",
+						allowInterrupt = false,
+						atomicPriority = false,
+						castAtMouse = false,
+						castPosX = 0,
+						castPosY = 0,
+						castPosZ = 0,
+						clusterMinPercent = false,
+						clusterMinTarget = 1,
+						clusterRadius = 8,
+						clusterRange = 30,
+						conditions = 
+						{
+							
+							{
+								"285098cb-d656-1f34-ad23-84d0d07e869c",
+								true,
+							},
+							
+							{
+								"94699a84-6d60-1bd5-b5be-4817bdb9a57b",
+								true,
+							},
+							
+							{
+								"9dd5e19e-99aa-325a-8513-f4ee4bf179bb",
+								true,
+							},
+						},
+						endIfUsed = true,
+						fallthrough = true,
+						gVar = "ACR_RikuWHM2_Hotbar_ThinAir",
+						gVarValue = 1,
+						ignoreWeaveRules = false,
+						isAreaTarget = false,
+						luaNeedsWeaveWindow = false,
+						luaReturnsAction = false,
+						name = "",
+						potType = 1,
+						setTarget = false,
+						showPositionPreview = false,
+						stopCasting = false,
+						stopMoving = false,
+						targetContentID = -1,
+						targetName = "",
+						targetSubType = "Nearest",
+						targetType = "Self",
+						untarget = false,
+						useForWeaving = false,
+						useItem = false,
+						useItemID = 0,
+						useItemName = "",
+						usePot = false,
+						uuid = "8bec73b0-e914-ba37-af27-ed74410b65f9",
+						variableIsHover = false,
+						variableTogglesType = 2,
+						version = 2,
+					},
+					inheritedIndex = 7,
 					inheritedObjectUUID = "",
 					inheritedOverwrites = 
 					{
@@ -1645,7 +1785,7 @@ local tbl =
 						clusterRadius = 8,
 						clusterRange = 30,
 						comparator = 1,
-						conditionLua = "return Argus ~= nil and AnyoneCore.inUnavoidableAOE(TensorCore.mGetPlayer().id)",
+						conditionLua = "return AnyoneCore.AOEMitigation[eventArgs.spellID] == true",
 						conditionType = 1,
 						conditions = 
 						{
@@ -1690,7 +1830,7 @@ local tbl =
 						minTargetPercent = false,
 						mpType = 1,
 						mpValue = 0,
-						name = "unavoidable aoe",
+						name = "check aoe mitigation table",
 						partyTargetContentID = -1,
 						partyTargetName = "",
 						partyTargetNumber = 1,
@@ -2930,6 +3070,100 @@ local tbl =
 						version = 2,
 					},
 					inheritedIndex = 17,
+					inheritedObjectUUID = "",
+					inheritedOverwrites = 
+					{
+					},
+				},
+				
+				{
+					data = 
+					{
+						actionCDValue = 0,
+						actionID = 7430,
+						buffCheckType = 1,
+						buffDuration = 0,
+						buffID = -1,
+						buffIDList = 
+						{
+						},
+						category = "Self",
+						channelCheckSpellID = -1,
+						channelCheckSpellIDList = 
+						{
+						},
+						channelCheckTimeRemain = 0,
+						channelCheckType = 1,
+						clusterMinPercent = false,
+						clusterMinTarget = 1,
+						clusterOriginalTarget = false,
+						clusterRadius = 8,
+						clusterRange = 30,
+						comparator = 2,
+						conditionLua = "",
+						conditionType = 4,
+						conditions = 
+						{
+						},
+						contentid = -1,
+						dequeueIfLuaFalse = false,
+						enmityValue = 0,
+						eventArgOptionType = 1,
+						eventArgType = 1,
+						eventBuffDuration = 0,
+						eventBuffID = -1,
+						eventChatLine = "",
+						eventEntityContentID = -1,
+						eventEntityID = -1,
+						eventEntityName = "",
+						eventMarkerID = -1,
+						eventOwnerContentID = -1,
+						eventOwnerID = -1,
+						eventOwnerName = "",
+						eventSpellID = -1,
+						eventSpellName = -1,
+						eventTargetContentID = -1,
+						eventTargetID = -1,
+						eventTargetName = "",
+						filterTargetSubtype = "Nearest",
+						filterTargetType = "Self",
+						gaugeIndex = 1,
+						gaugeValue = 0,
+						hpType = 1,
+						hpValue = 0,
+						inCombatType = 1,
+						inRangeValue = 0,
+						lastSkillID = -1,
+						localMapIDList = 
+						{
+						},
+						localmapid = -1,
+						markerIDList = 
+						{
+						},
+						matchAnyBuff = false,
+						minTargetPercent = false,
+						mpType = 1,
+						mpValue = 0,
+						name = "CD - Thin Air <= 0s",
+						partyTargetContentID = -1,
+						partyTargetName = "",
+						partyTargetNumber = 1,
+						partyTargetSubType = "Nearest",
+						partyTargetType = "All",
+						rangeCheckSourceSubType = "Nearest",
+						rangeCheckSourceType = "Self",
+						rangeSourceContentID = -1,
+						rangeSourceName = "",
+						setEventTargetSubtype = 1,
+						setFirstMatch = false,
+						spellIDList = 
+						{
+						},
+						uuid = "94699a84-6d60-1bd5-b5be-4817bdb9a57b",
+						version = 2,
+					},
+					inheritedIndex = 16,
 					inheritedObjectUUID = "",
 					inheritedOverwrites = 
 					{
@@ -5562,64 +5796,8 @@ local tbl =
 			uuid = "e53fb64c-27d7-5825-b6ed-7d69e5d1e97b",
 			version = 2,
 		},
-		inheritedIndex = 36,
+		inheritedIndex = 25,
 		inheritedObjectUUID = "",
-	},
-	
-	{
-		data = 
-		{
-			name = "--pvp",
-			uuid = "42474d1c-1f73-bb8b-9699-57fc838419ff",
-			version = 2,
-		},
-		inheritedIndex = 37,
-		inheritedObjectUUID = "bf0203c6-5698-5511-a954-6c3da72e3b31",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "Silence Burst (Channeled)",
-			uuid = "2e251d5e-d1fb-97ef-bca9-72d7661afcc1",
-			version = 2,
-		},
-		inheritedIndex = 38,
-		inheritedObjectUUID = "70ea9af9-d3c4-2b1b-bccc-275237832996",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "Silence Burst",
-			uuid = "91b1ab5f-6c6f-e8d7-b9fb-2f48ed00ddaa",
-			version = 2,
-		},
-		inheritedIndex = 39,
-		inheritedObjectUUID = "1ab51ad0-55c9-767d-865a-5c46475ad7d8",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
-			name = "TTS Warrior Limit Break",
-			uuid = "615cf789-fb70-f8c8-8659-8e7a720071a2",
-			version = 2,
-		},
-		inheritedIndex = 40,
-		inheritedObjectUUID = "72ead624-26b2-190d-aaaf-572e004ce8fb",
-		inheritedOverwrites = 
-		{
-		},
 	},
 	
 	{
@@ -5640,7 +5818,7 @@ local tbl =
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
 			mechanicTime = 0,
-			name = "v4.0.9.2",
+			name = "v4.0.9.9",
 			randomOffset = 0,
 			throttleTime = 0,
 			timeRandomRange = false,
@@ -5653,13 +5831,12 @@ local tbl =
 			uuid = "45f46047-a0e0-51d4-adfb-770b4bfbfa8c",
 			version = 2,
 		},
-		inheritedIndex = 41,
+		inheritedIndex = 30,
 		inheritedObjectUUID = "",
 	}, 
 	inheritedProfiles = 
 	{
 		"store\\anyone\\whitemage",
-		"store\\anyone\\pvp",
 	},
 }
 
