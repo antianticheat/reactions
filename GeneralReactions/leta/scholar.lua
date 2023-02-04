@@ -88,6 +88,20 @@ local tbl =
 	{
 		data = 
 		{
+			name = "Draw line to nisi partner",
+			uuid = "fe70c0eb-1ce4-22da-afee-5e677d29f4ea",
+			version = 2,
+		},
+		inheritedIndex = 5,
+		inheritedObjectUUID = "d407b118-0ab8-7108-85e9-49965f87aded",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
 			name = "Titan jails",
 			uuid = "8d12e37b-4424-530a-b2ae-05f57610dedc",
 			version = 2,
@@ -144,25 +158,11 @@ local tbl =
 	{
 		data = 
 		{
-			name = "Draw quotes",
-			uuid = "336d326e-1a7a-bb86-8f93-3fe16423dae9",
-			version = 2,
-		},
-		inheritedIndex = 12,
-		inheritedObjectUUID = "79d07751-0776-e532-a750-6421eeb9169b",
-		inheritedOverwrites = 
-		{
-		},
-	},
-	
-	{
-		data = 
-		{
 			name = "Marker Reactions",
 			uuid = "71871b73-3418-54df-8bcb-c67faa9cb025",
 			version = 2,
 		},
-		inheritedIndex = 13,
+		inheritedIndex = 12,
 		inheritedObjectUUID = "95c88b0b-7bd5-c34b-acc7-a6ec9ec6d70a",
 		inheritedOverwrites = 
 		{
@@ -176,8 +176,134 @@ local tbl =
 			uuid = "0385a58f-fa58-c397-ae3a-ecf776ad9b8b",
 			version = 2,
 		},
-		inheritedIndex = 14,
+		inheritedIndex = 13,
 		inheritedObjectUUID = "18e6def3-7035-6610-b991-ec788d1c73aa",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Draw quotes",
+			uuid = "336d326e-1a7a-bb86-8f93-3fe16423dae9",
+			version = 2,
+		},
+		inheritedIndex = 14,
+		inheritedObjectUUID = "79d07751-0776-e532-a750-6421eeb9169b",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Silkie",
+			uuid = "f0f3969b-4120-2deb-a53a-9465b6135ed8",
+			version = 2,
+		},
+		inheritedIndex = 16,
+		inheritedObjectUUID = "65ac2f02-4372-8e35-a0ef-57f33aac7e43",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Silkie Channel",
+			uuid = "781dc3f5-562b-3030-a6e9-467442e9174b",
+			version = 2,
+		},
+		inheritedIndex = 17,
+		inheritedObjectUUID = "03a74888-37ce-4042-99b4-6c04d2f531aa",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Gladiator",
+			uuid = "6bd6a66a-37b9-2e0b-8b52-9ddff39e5541",
+			version = 2,
+		},
+		inheritedIndex = 18,
+		inheritedObjectUUID = "c7a91848-de71-fc6c-85b5-5209d81c03d0",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Shadowcaster",
+			uuid = "74e3f1ad-2193-46da-be53-1886c5a3337a",
+			version = 2,
+		},
+		inheritedIndex = 19,
+		inheritedObjectUUID = "08a83de0-6a5d-39ad-ab68-dda78868dfcc",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Shadowcaster Script",
+			uuid = "bf5abe77-cd80-9dc2-8afb-892e67c397d9",
+			version = 2,
+		},
+		inheritedIndex = 20,
+		inheritedObjectUUID = "f8ec4192-f420-c816-90bf-b0280aef7675",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Shadowcaster Channel",
+			uuid = "939fc0ee-3674-c934-84ed-0bbf9fd5f413",
+			version = 2,
+		},
+		inheritedIndex = 21,
+		inheritedObjectUUID = "c41e069b-40c8-7063-8876-76735d1c555d",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "Criterion Blacklists",
+			uuid = "17729a0e-30bb-32b9-9a57-3615255d6ac2",
+			version = 2,
+		},
+		inheritedIndex = 22,
+		inheritedObjectUUID = "e400c842-73a7-374a-9616-1bdcd926b183",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "--Misc",
+			uuid = "36182f45-a7f7-792a-b664-493b9c0020f0",
+			version = 2,
+		},
+		inheritedIndex = 23,
+		inheritedObjectUUID = "00299d60-9aca-4567-8079-058341fcfd33",
 		inheritedOverwrites = 
 		{
 		},
@@ -192,29 +318,23 @@ local tbl =
 				{
 					data = 
 					{
-						aType = "Misc",
+						aType = "Lua",
+						actionLua = "d(\"[AnyoneCore] Countdown started - engaging Prepull Helper.\")\nAnyoneCore.Data.countdownTime = Now()\nAnyoneCore.Data.countdownDuration = tonumber(eventArgs.time)\ndata.startCombat = gStartCombat\ngStartCombat = false\nAnyoneCore.JobCheck()\nif AnyoneCore.Settings.PrepullHelper.twominpot == true and ACR_RikuSCH2_Potion == true then\n    AnyoneCore.Data.PotsEnabled = true\n    ACR_RikuSCH2_Potion = false\n    AnyoneCore.Toggle(\"pots\", false, (30000 + eventArgs.time))\nend\nlocal ac = ActionList:Get(1, 3584)\ndata.castTime = ac.casttime\nself.used = true",
 						conditions = 
 						{
 							
 							{
-								"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
 								true,
 							},
 							
 							{
-								"f0635090-e89f-2ae2-844c-c7f30531ad49",
-								true,
-							},
-							
-							{
-								"4838a5f2-e6ec-e56e-a71c-d5c8620b5353",
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 								true,
 							},
 						},
-						name = "target nearest",
-						setTarget = true,
-						targetType = "Enemy",
-						uuid = "b0e66759-e311-9c80-a57f-2e93ff99d4d1",
+						name = "Set Variables",
+						uuid = "8ceba036-70b3-14a9-8147-e299a38d5ccd",
 						version = 2,
 					},
 				},
@@ -227,23 +347,24 @@ local tbl =
 						{
 							
 							{
-								"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
 								true,
 							},
 							
 							{
-								"f0635090-e89f-2ae2-844c-c7f30531ad49",
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 								true,
 							},
 							
 							{
-								"158de54e-eb59-5356-ba1d-09ae0a4755b8",
+								"74431404-7272-3011-892b-18db2e4fa1a5",
 								true,
 							},
 						},
-						potType = 3,
-						usePot = true,
-						uuid = "c5464876-939e-a612-99c9-88099e6a26a4",
+						name = "Target Nearest",
+						setTarget = true,
+						targetType = "Enemy",
+						uuid = "ad3c6f9c-68b3-dd49-844f-28b4f9aca282",
 						version = 2,
 					},
 				},
@@ -257,23 +378,53 @@ local tbl =
 						{
 							
 							{
-								"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
 								true,
 							},
 							
 							{
-								"f0635090-e89f-2ae2-844c-c7f30531ad49",
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 								true,
 							},
 							
 							{
-								"a962d9e7-4b65-edcd-9471-ef375fc9f1d2",
+								"de7d078f-d3ad-7b91-8f56-2780e2a467b7",
 								true,
 							},
 						},
 						ignoreWeaveRules = true,
 						targetType = "Current Target",
-						uuid = "babc2a60-fe4c-73de-902d-be209d2cb7f6",
+						uuid = "c57036ed-3b36-a78b-898e-32119d4b1446",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Misc",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"f29b914f-cece-d670-b855-f37856f50c03",
+								true,
+							},
+						},
+						name = "Target Nearest",
+						setTarget = true,
+						targetType = "Enemy",
+						uuid = "d74a784f-c225-fd1e-bd26-938e349d5f8a",
 						version = 2,
 					},
 				},
@@ -282,27 +433,27 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "gStartCombat = true\nself.used = true",
+						actionLua = "TensorCore.API.RikuSCH2.holdActionUntil(7436, Now() + 7000) -- chain strategem\nTensorCore.API.RikuSCH2.holdActionUntil(167, Now() + 7000) -- energy drain\nTensorCore.API.RikuSCH2.holdActionUntil(3587, Now() + 7000) -- dissipation\ngStartCombat = true\nself.used = true",
 						conditions = 
 						{
 							
 							{
-								"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
 								true,
 							},
 							
 							{
-								"f0635090-e89f-2ae2-844c-c7f30531ad49",
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 								true,
 							},
 							
 							{
-								"d6e5f76d-373f-5144-b6fa-a511c76c8e00",
+								"f29b914f-cece-d670-b855-f37856f50c03",
 								true,
 							},
 						},
-						name = "enable start combat",
-						uuid = "acd6dbc0-16e7-981a-a0e6-d73faa863359",
+						name = "Engage",
+						uuid = "d763d3f0-694b-230a-853e-18910819588e",
 						version = 2,
 					},
 				},
@@ -311,38 +462,27 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "if data.countdownCanceled == true or (data.countdownTime ~= nil and data.countdownDuration ~= nil and data.countdownDuration - TimeSince(data.countdownTime) <= -2500) then\n    d(\"[AnyoneCore] Countdown finished.\")\n\t\t\t\tif data.countdownCanceled == true then\n\t\t\t\t\t\tPlayer:ClearTarget()\n\t\t\t\t\t\tAnyoneCore.Data.countdownTime = nil\n\t\t\t\t\t\tAnyoneCore.Data.countdownDuration = nil\n\t\t\t\tend\n\t\t\t\tdata.countdownCanceled = nil\n\t\t\t\tgStartCombat = data.startCombat\n\t\t\t\tdata.countdownTime = nil\n\t\t\t\tdata.countdownDuration = nil\n    self.used = true\nend",
+						actionLua = "d(\"[AnyoneCore] Countdown finished, engaging boss.\")\ngStartCombat = data.startCombat\nAnyoneCore.Data.countdownTime = nil\nAnyoneCore.Data.countdownDuration = nil\nself.used = true",
 						conditions = 
 						{
 							
 							{
-								"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
 								true,
 							},
-						},
-						endIfUsed = true,
-						name = "end reaction",
-						uuid = "dab7f400-ecf4-4294-a745-e2f7ac5a1b22",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Lua",
-						actionLua = "data.countdownCanceled = true\nAnyoneCore.Data.countdownCanceled = true\nAnyoneCore.log(\"Countdown was canceled.\")\nself.used = true",
-						conditions = 
-						{
 							
 							{
-								"50124129-980a-3a46-b291-5a37b9f25ce2",
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"d880da65-e049-0e94-b956-f1df2e89d4ac",
 								true,
 							},
 						},
-						endIfUsed = true,
-						name = "cancel prepull helper",
-						uuid = "451a1cc6-ace3-1170-96e9-aeff38c3affb",
+						name = "End",
+						uuid = "203d44e2-1376-992c-b272-b19fb620f602",
 						version = 2,
 					},
 				},
@@ -354,10 +494,9 @@ local tbl =
 					data = 
 					{
 						category = "Lua",
-						conditionLua = "return TensorCore.mGetPlayer().job == 28 and (AnyoneCore.assistCallback()) and AnyoneCore ~= nil and AnyoneCore.Settings.PrepullHelper.enabled == true and data.countdownDuration ~= nil and data.countdownTime ~= nil",
-						name = "is bot running",
-						partyTargetSubType = 1,
-						uuid = "f0635090-e89f-2ae2-844c-c7f30531ad49",
+						conditionLua = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.PrepullHelper.enabled",
+						name = "Check BotRunning",
+						uuid = "4a7db5d9-954b-bac7-9064-bbd7166b5052",
 						version = 2,
 					},
 				},
@@ -365,13 +504,12 @@ local tbl =
 				{
 					data = 
 					{
-						category = "Lua",
-						conditionLua = "local time = eventArgs.line.line:match(AnyoneCore.Data.countdownstart)\nif time ~= nil then\n\tif data.countdownDuration == nil then\n        d(\"[AnyoneCore] Countdown started - engaging Prepull Helper.\")\n        AnyoneCore.Data.countdownTime = Now()\n        AnyoneCore.Data.countdownDuration = tonumber(time)\n        local time = tonumber(time)*1000\n        data.countdownTime = Now()\n        data.countdownDuration = time\n        data.pelotonDelay = math.random(time*0.1, time*0.5)\n        data.reassembleDelay = math.random(1000, 2000)\n        data.targetDelay = math.random(10, 250)\n        data.startCombat = gStartCombat\n        gStartCombat = false\n        AnyoneCore.JobCheck()\n        if AnyoneCore.Settings.PrepullHelper.twominpot == true and ACR_RikuSCH2_Potion == true then\n            AnyoneCore.Data.PotsEnabled = true\n            ACR_RikuSCH2_Potion = false\n            AnyoneCore.Toggle(\"pots\", false, (30000 + time))\n        end\n        local ac = ActionList:Get(1, 3584)\n        data.castTime = ac.casttime\n    end\n    return true\nend\nreturn false",
+						category = "Self",
+						conditionType = 13,
 						dequeueIfLuaFalse = true,
-						eventChatLine = "Battle commencing in 10 seconds!",
-						name = "is countdown started",
-						partyTargetSubType = 1,
-						uuid = "61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+						jobValue = "SCHOLAR",
+						name = "Scholar",
+						uuid = "e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 						version = 2,
 					},
 				},
@@ -379,11 +517,37 @@ local tbl =
 				{
 					data = 
 					{
-						category = "Lua",
-						conditionLua = "return data.countdownDuration - TimeSince(data.countdownTime) <= (1000 + AnyoneCore.Settings.PrepullHelper.BadTeamDelay)",
-						name = "engage boss timer",
-						partyTargetSubType = 1,
-						uuid = "d6e5f76d-373f-5144-b6fa-a511c76c8e00",
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 2,
+						name = "Target Timer",
+						uuid = "74431404-7272-3011-892b-18db2e4fa1a5",
+						version = 2,
+					},
+					inheritedIndex = 5,
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 1.7000000476837,
+						name = "Broil Timer",
+						uuid = "de7d078f-d3ad-7b91-8f56-2780e2a467b7",
+						version = 2,
+					},
+					inheritedIndex = 6,
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 0.5,
+						name = "Engage Boss Timer",
+						uuid = "f29b914f-cece-d670-b855-f37856f50c03",
 						version = 2,
 					},
 				},
@@ -391,69 +555,20 @@ local tbl =
 				{
 					data = 
 					{
-						category = "Lua",
-						conditionLua = "return data.countdownDuration - TimeSince(data.countdownTime) <= 0",
-						name = "end reaction timer",
-						partyTargetSubType = 1,
-						uuid = "f52fcb09-9460-e051-9463-25c8bb0be180",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return data.countdownDuration - TimeSince(data.countdownTime) <= 20000 - data.targetDelay",
-						name = "target boss timer",
-						partyTargetSubType = 1,
-						uuid = "4838a5f2-e6ec-e56e-a71c-d5c8620b5353",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "local line = eventArgs.line.line\nfor k,v in pairs(AnyoneCore.countdowncancel) do\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
-						dequeueIfLuaFalse = true,
-						name = "is countdown cancelled",
-						uuid = "50124129-980a-3a46-b291-5a37b9f25ce2",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return data.countdownDuration - TimeSince(data.countdownTime) <= (2100 + (data.castTime*1000)) and ACR_RikuSCH2_Potion == true",
-						name = "pot timer",
-						partyTargetSubType = 1,
-						uuid = "158de54e-eb59-5356-ba1d-09ae0a4755b8",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return data.countdownDuration - TimeSince(data.countdownTime) <= ((data.castTime*1000) + AnyoneCore.Settings.PrepullHelper.BadTeamDelay)",
-						name = "broil timer",
-						partyTargetSubType = 1,
-						uuid = "a962d9e7-4b65-edcd-9471-ef375fc9f1d2",
+						category = "Event",
+						comparator = 2,
+						name = "End Timer",
+						uuid = "d880da65-e049-0e94-b956-f1df2e89d4ac",
 						version = 2,
 					},
 				},
 			},
-			eventType = 7,
+			eventType = 16,
 			name = "Prepull Helper",
-			uuid = "d56b56be-9d3c-e3c2-b909-bd9cf8f1cc0e",
+			uuid = "53c2dcfb-b1ee-d4bb-b6f8-956e2efa15d5",
 			version = 2,
 		},
-		inheritedIndex = 16,
+		inheritedIndex = 24,
 	},
 	
 	{
@@ -463,7 +578,7 @@ local tbl =
 			uuid = "aaeb206a-3a25-d6ed-a73a-8c7188fd43be",
 			version = 2,
 		},
-		inheritedIndex = 28,
+		inheritedIndex = 25,
 		inheritedObjectUUID = "17e714bc-2572-57a6-a498-a398a8e274c1",
 		inheritedOverwrites = 
 		{
@@ -477,7 +592,7 @@ local tbl =
 			uuid = "9eef6a42-2271-b232-a9a4-8cce0aee29be",
 			version = 2,
 		},
-		inheritedIndex = 29,
+		inheritedIndex = 26,
 		inheritedObjectUUID = "5b15d2e7-a953-542c-b3c3-945c374dd5d1",
 		inheritedOverwrites = 
 		{
@@ -491,7 +606,7 @@ local tbl =
 			uuid = "05835b24-0e01-4d8f-902d-46ca5a73d06b",
 			version = 2,
 		},
-		inheritedIndex = 19,
+		inheritedIndex = 27,
 		inheritedObjectUUID = "3252e059-b557-925d-a580-d94313de83d4",
 		inheritedOverwrites = 
 		{
@@ -640,12 +755,12 @@ local tbl =
 			},
 			eventType = 3,
 			name = "Duty Helper",
-			throttleTime = 1000,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "80fc68eb-47df-5282-825a-568e4830b394",
 			version = 2,
 		},
-		inheritedIndex = 20,
+		inheritedIndex = 28,
 	},
 	
 	{
@@ -655,7 +770,7 @@ local tbl =
 			uuid = "49b82326-95d3-e267-9251-678d241d7f3c",
 			version = 2,
 		},
-		inheritedIndex = 21,
+		inheritedIndex = 29,
 		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
 		inheritedOverwrites = 
 		{
@@ -694,11 +809,12 @@ local tbl =
 			conditions = 
 			{
 			},
-			name = "-eels",
+			enabled = false,
+			name = "--Auto-healing",
 			uuid = "196f3e88-a90e-1ce3-b8b0-974fc7ea9b64",
 			version = 2,
 		},
-		inheritedIndex = 22,
+		inheritedIndex = 30,
 	},
 	
 	{
@@ -727,11 +843,6 @@ local tbl =
 							
 							{
 								"6ee8570f-8178-f544-9583-4be2580d6a19",
-								true,
-							},
-							
-							{
-								"58c627d7-3b06-a1e2-b841-d46154fdb20f",
 								true,
 							},
 							
@@ -792,11 +903,6 @@ local tbl =
 							
 							{
 								"e3f3363f-aeb8-f6c4-a81b-75d940273421",
-								true,
-							},
-							
-							{
-								"58c627d7-3b06-a1e2-b841-d46154fdb20f",
 								true,
 							},
 							
@@ -869,7 +975,6 @@ local tbl =
 							},
 						},
 						endIfUsed = true,
-						fallthrough = true,
 						gVar = "ACR_RikuSCH2_Healbar_FeyIllumination",
 						uuid = "ada7b9e7-a410-ce06-b19e-059f703c23d5",
 						variableTogglesType = 3,
@@ -2733,12 +2838,12 @@ local tbl =
 				},
 			},
 			name = "Heal",
-			throttleTime = 1000,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "718e9dd4-3256-182f-83c2-3849d7048cf0",
 			version = 2,
 		},
-		inheritedIndex = 23,
+		inheritedIndex = 31,
 	},
 	
 	{
@@ -2918,12 +3023,12 @@ local tbl =
 				},
 			},
 			name = "Esuna",
-			throttleTime = 1200,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "889e931b-f60f-e42b-9978-49b8e9526e8d",
 			version = 2,
 		},
-		inheritedIndex = 24,
+		inheritedIndex = 32,
 	},
 	
 	{
@@ -2936,7 +3041,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "if Leta == nil then\n    Leta = {}\nend\nif Leta.init ~= true then\n    Leta.lastTick = Now()\n\n    Leta.GUI = {\n        open = false,\n        visible = false\n    }\n    Leta.settings = {\n        LockedToggles = false,\n        Toggles = {\n            --global\n            [\"AOE\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"ST\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"GCD\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Esuna\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Mitigation\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Heal\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            --whm\n            [\"Asylum\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Bell\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Benediction\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"Temperance\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"HOT\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            --sage\n            [\"Haima\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Panhaima\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            [\"Pneuma\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Zoe\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Soteria\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            -- AST\n            [\"Macrocosmos\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"Neutral Sect\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Synastry\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Earthly Star\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"HoT\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Horoscope\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            --SCH\n            [\"Expedient\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Illumination\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Seraph\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"D Tactics\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Sacred Soil\"] = {bool = false, shown = true, group = 1, job = \"SCH\"}\n        }\n    }\n\n    Leta.ModToKey = {\n        [\"SHIFT\"] = 16,\n        [\"CONTROL\"] = 17,\n        [\"ALT\"] = 18\n    }\n    Leta.JobTable = {\n        [6] = \"WHM\",\n        [24] = \"WHM\",\n        [28] = \"SCH\",\n        [26] = \"SCH\",\n        [33] = \"AST\",\n        [40] = \"SGE\"\n    }\n\n    Leta.LuaPath = GetLuaModsPath()\n    Leta.SettingsPath = Leta.LuaPath .. [[ffxivminion\\leta\\]]\n    Leta.SettingsFile = Leta.SettingsPath .. [[Settings.lua]]\n    local v = table.valid\n    function Leta.valid(...)\n        local tbl = {...}\n        local size = #tbl\n        if size > 0 then\n            local count = tbl[1]\n            if type(count) == \"number\" then\n                if size == (count + 1) then\n                    for i = 2, size do\n                        if not v(tbl[i]) then\n                            return false\n                        end\n                    end\n                    return true\n                end\n            else\n                for i = 1, size do\n                    if not v(tbl[i]) then\n                        return false\n                    end\n                end\n                return true\n            end\n        end\n        return false\n    end\n    local valid = Leta.valid\n\n    function Leta.LoadSettings()\n        if (not FolderExists(Leta.SettingsPath)) then\n            FolderCreate(Leta.SettingsPath)\n        end\n        local tbl = FileLoad(Leta.SettingsFile)\n        local function scan(tbl, tbl2, depth)\n            depth = depth or 0\n            if valid(2, tbl, tbl2) then\n                for k, v in pairs(tbl2) do\n                    if type(v) == \"table\" then\n                        if tbl[k] and valid(tbl[k]) then\n                            tbl[k] = table.merge(tbl[k], scan(tbl[k], v, depth + 1))\n                        else\n                            tbl[k] = v\n                        end\n                    else\n                        if tbl[k] ~= tbl2[k] then\n                            tbl[k] = tbl2[k]\n                        end\n                    end\n                end\n            end\n            return tbl\n        end\n        Leta.settings = scan(Leta.settings, tbl)\n    end\n\n    function Leta.SaveSettings()\n        d(\"[Leta] Settings saved\")\n        if not table.deepcompare(Leta.settings, PreviousSave) then\n            if (not FolderExists(Leta.SettingsPath)) then\n                FolderCreate(Leta.SettingsPath)\n            end\n\n            FileSave(Leta.SettingsFile, Leta.settings)\n            PreviousSave = table.deepcopy(Leta.settings)\n        end\n    end\n    Leta.LoadSettings()\n    Leta.init = true\nend\nself.used = true\n",
+						actionLua = "if Leta == nil then\n    Leta = {}\nend\nif Leta.init ~= true then\n    Leta.lastTick = Now()\n\n    Leta.GUI = {\n        open = false,\n        visible = false\n    }\n    Leta.settings = {\n        LockedToggles = false,\n        Toggles = {\n            --global\n            [\"AOE\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"ST\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"GCD\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Esuna\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Mitigation\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Heal\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            --whm\n            [\"Asylum\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Bell\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Benediction\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"Temperance\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"HOT\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\t\t\t\t\t\t\t\t\t\t\t\t\n            --sage\n            [\"Haima\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Panhaima\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            [\"Pneuma\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Zoe\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Soteria\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Pneuma Opener\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            -- AST\n            [\"Macrocosmos\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"Neutral Sect\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Synastry\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Earthly Star\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"HoT\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Horoscope\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            --SCH\n            [\"Expedient\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Illumination\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Seraph\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"D Tactics\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Sacred Soil\"] = {bool = false, shown = true, group = 1, job = \"SCH\"},\n        }\n    }\n\n    Leta.ModToKey = {\n        [\"SHIFT\"] = 16,\n        [\"CONTROL\"] = 17,\n        [\"ALT\"] = 18\n    }\n    Leta.JobTable = {\n        [6] = \"WHM\",\n        [24] = \"WHM\",\n        [28] = \"SCH\",\n        [26] = \"SCH\",\n        [33] = \"AST\",\n        [40] = \"SGE\"\n    }\n\n    Leta.LuaPath = GetLuaModsPath()\n    Leta.SettingsPath = Leta.LuaPath .. [[ffxivminion\\leta\\]]\n    Leta.SettingsFile = Leta.SettingsPath .. [[Settings.lua]]\n    local v = table.valid\n    function Leta.valid(...)\n        local tbl = {...}\n        local size = #tbl\n        if size > 0 then\n            local count = tbl[1]\n            if type(count) == \"number\" then\n                if size == (count + 1) then\n                    for i = 2, size do\n                        if not v(tbl[i]) then\n                            return false\n                        end\n                    end\n                    return true\n                end\n            else\n                for i = 1, size do\n                    if not v(tbl[i]) then\n                        return false\n                    end\n                end\n                return true\n            end\n        end\n        return false\n    end\n    local valid = Leta.valid\n\n    function Leta.LoadSettings()\n        if (not FolderExists(Leta.SettingsPath)) then\n            FolderCreate(Leta.SettingsPath)\n        end\n        local tbl = FileLoad(Leta.SettingsFile)\n        local function scan(tbl, tbl2, depth)\n            depth = depth or 0\n            if valid(2, tbl, tbl2) then\n                for k, v in pairs(tbl2) do\n                    if type(v) == \"table\" then\n                        if tbl[k] and valid(tbl[k]) then\n                            tbl[k] = table.merge(tbl[k], scan(tbl[k], v, depth + 1))\n                        else\n                            tbl[k] = v\n                        end\n                    else\n                        if tbl[k] ~= tbl2[k] then\n                            tbl[k] = tbl2[k]\n                        end\n                    end\n                end\n            end\n            return tbl\n        end\n        Leta.settings = scan(Leta.settings, tbl)\n    end\n\n    function Leta.SaveSettings()\n        d(\"[Leta] Settings saved\")\n        if not table.deepcompare(Leta.settings, PreviousSave) then\n            if (not FolderExists(Leta.SettingsPath)) then\n                FolderCreate(Leta.SettingsPath)\n            end\n\n            FileSave(Leta.SettingsFile, Leta.settings)\n            PreviousSave = table.deepcopy(Leta.settings)\n        end\n    end\n    Leta.LoadSettings()\n    Leta.init = true\nend\nself.used = true\n",
 						conditions = 
 						{
 							
@@ -3028,7 +3133,7 @@ local tbl =
 			uuid = "773f67d6-3e37-de4d-aeb1-d01f69456186",
 			version = 2,
 		},
-		inheritedIndex = 25,
+		inheritedIndex = 33,
 	},
 	
 	{
@@ -3041,22 +3146,66 @@ local tbl =
 			{
 			},
 			enabled = false,
-			name = "v5.2.2.6",
-			uuid = "591aa599-4629-bc2a-9ff3-5f836a4b93da",
+			name = "--Version Number",
+			uuid = "a22bad1a-15ae-b6f2-900c-c7a5b8ea0dc1",
 			version = 2,
 		},
-		inheritedIndex = 26,
+		inheritedIndex = 34,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "letaVersion = \"5.2.4.9\"\nd(\"Leta's reactions \" .. letaVersion .. \" loaded.\")\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"8d72527b-8ee0-5fbf-b774-dfe95cd7dcac",
+								true,
+							},
+						},
+						uuid = "f96a0929-c656-8277-b4c0-8fe992e106c2",
+						version = 2,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return letaVersion == nil",
+						dequeueIfLuaFalse = true,
+						uuid = "8d72527b-8ee0-5fbf-b774-dfe95cd7dcac",
+						version = 2,
+					},
+				},
+			},
+			name = "v5.2.4.9",
+			uuid = "e9fc6ef3-2df7-997b-899f-bb04a90d6bbb",
+			version = 2,
+		},
+		inheritedIndex = 35,
 	},
 	
 	{
 		data = 
 		{
 			name = "n/a",
-			uuid = "fbfae9df-7189-f70f-8bb0-5b045713eed9",
+			uuid = "d08ed7aa-c757-7328-aa20-362771b5b1b7",
 			version = 2,
 		},
-		inheritedIndex = 27,
-		inheritedObjectUUID = "dcec4734-df1d-e575-90af-afd363c2a735",
+		inheritedObjectUUID = "b4374aee-9258-7cc7-ba0a-4c199abe8313",
 		inheritedOverwrites = 
 		{
 			actions = 
@@ -3068,44 +3217,45 @@ local tbl =
 					{
 						data = 
 						{
-							name = "target nearest",
-							uuid = "87d02707-7342-9085-b5a0-d83a928386e6",
+							name = "End",
+							uuid = "de9b566c-4300-78b0-8247-c893b17cf359",
 							version = 2,
 						},
-						inheritedObjectUUID = "b0e66759-e311-9c80-a57f-2e93ff99d4d1",
+						inheritedObjectUUID = "203d44e2-1376-992c-b272-b19fb620f602",
 						inheritedOverwrites = 
 						{
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"f0635090-e89f-2ae2-844c-c7f30531ad49",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"4838a5f2-e6ec-e56e-a71c-d5c8620b5353",
-										true,
-									},
-								},
-							},
 						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "Engage",
+							uuid = "ec570fb1-a471-50f5-bfd6-71f74e574712",
+							version = 2,
+						},
+						inheritedObjectUUID = "d763d3f0-694b-230a-853e-18910819588e",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "Target Nearest",
+							uuid = "e6985f6c-374e-f9a6-bb49-a3a0ecc5167c",
+							version = 2,
+						},
+						inheritedObjectUUID = "d74a784f-c225-fd1e-bd26-938e349d5f8a",
 					},
 				},
 				
@@ -3116,43 +3266,10 @@ local tbl =
 						data = 
 						{
 							name = "",
-							uuid = "cd50c97d-57a7-ae1c-ab2d-4600b2b8f7f5",
+							uuid = "18940de9-8093-9f1e-a0ac-a177b6a9189c",
 							version = 2,
 						},
-						inheritedObjectUUID = "c5464876-939e-a612-99c9-88099e6a26a4",
-						inheritedOverwrites = 
-						{
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"f0635090-e89f-2ae2-844c-c7f30531ad49",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"158de54e-eb59-5356-ba1d-09ae0a4755b8",
-										true,
-									},
-								},
-							},
-						},
+						inheritedObjectUUID = "c57036ed-3b36-a78b-898e-32119d4b1446",
 					},
 				},
 				
@@ -3162,45 +3279,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "",
-							uuid = "20a0848c-e5f0-6741-932f-5078f12d181f",
+							name = "Target Nearest",
+							uuid = "dd0cb2c5-0e0d-710e-8aeb-6192fa2ff9a3",
 							version = 2,
 						},
-						inheritedObjectUUID = "babc2a60-fe4c-73de-902d-be209d2cb7f6",
-						inheritedOverwrites = 
-						{
-							actionID = 3584,
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"f0635090-e89f-2ae2-844c-c7f30531ad49",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"a962d9e7-4b65-edcd-9471-ef375fc9f1d2",
-										true,
-									},
-								},
-							},
-						},
+						inheritedObjectUUID = "ad3c6f9c-68b3-dd49-844f-28b4f9aca282",
 					},
 				},
 				
@@ -3210,101 +3293,13 @@ local tbl =
 					{
 						data = 
 						{
-							name = "enable start combat",
-							uuid = "0744c7ff-1a29-948f-a0dc-a843efc109a6",
+							name = "Set Variables",
+							uuid = "871abc30-2720-f9e7-bd02-752de0c2cd9c",
 							version = 2,
 						},
-						inheritedObjectUUID = "acd6dbc0-16e7-981a-a0e6-d73faa863359",
+						inheritedObjectUUID = "8ceba036-70b3-14a9-8147-e299a38d5ccd",
 						inheritedOverwrites = 
 						{
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"f0635090-e89f-2ae2-844c-c7f30531ad49",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-										true,
-									},
-								},
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"d6e5f76d-373f-5144-b6fa-a511c76c8e00",
-										true,
-									},
-								},
-							},
-						},
-					},
-				},
-				
-				{
-					type = "remove",
-					value = 
-					{
-						data = 
-						{
-							name = "end reaction",
-							uuid = "96f3b244-77b5-bee1-8d5c-f75f8ae8e0bf",
-							version = 2,
-						},
-						inheritedObjectUUID = "dab7f400-ecf4-4294-a745-e2f7ac5a1b22",
-						inheritedOverwrites = 
-						{
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-										true,
-									},
-								},
-							},
-						},
-					},
-				},
-				
-				{
-					type = "remove",
-					value = 
-					{
-						data = 
-						{
-							name = "cancel prepull helper",
-							uuid = "9bb1e081-2ae2-543a-bb0a-8a9eb7d63813",
-							version = 2,
-						},
-						inheritedObjectUUID = "451a1cc6-ace3-1170-96e9-aeff38c3affb",
-						inheritedOverwrites = 
-						{
-							conditions = 
-							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"50124129-980a-3a46-b291-5a37b9f25ce2",
-										true,
-									},
-								},
-							},
 						},
 					},
 				},
@@ -3318,14 +3313,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "is bot running",
-							uuid = "949f79b9-ad1a-c0fb-9075-7108d01be39b",
+							name = "End Timer",
+							uuid = "d7207be3-8b90-a66f-8f17-2f68f14d3f05",
 							version = 2,
 						},
-						inheritedObjectUUID = "f0635090-e89f-2ae2-844c-c7f30531ad49",
-						inheritedOverwrites = 
-						{
-						},
+						inheritedObjectUUID = "d880da65-e049-0e94-b956-f1df2e89d4ac",
 					},
 				},
 				
@@ -3335,14 +3327,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "is countdown started",
-							uuid = "59a23dc4-ccc0-b8c9-af44-342589f20967",
+							name = "Engage Boss Timer",
+							uuid = "134041fc-0273-af40-b164-1686045ee22e",
 							version = 2,
 						},
-						inheritedObjectUUID = "61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
-						inheritedOverwrites = 
-						{
-						},
+						inheritedObjectUUID = "f29b914f-cece-d670-b855-f37856f50c03",
 					},
 				},
 				
@@ -3352,14 +3341,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "engage boss timer",
-							uuid = "afe8a642-b1a9-8561-9ca0-c08e5f82e139",
+							name = "Broil Timer",
+							uuid = "5a70cb99-8794-5503-83aa-c29f0fa25bb3",
 							version = 2,
 						},
-						inheritedObjectUUID = "d6e5f76d-373f-5144-b6fa-a511c76c8e00",
-						inheritedOverwrites = 
-						{
-						},
+						inheritedObjectUUID = "de7d078f-d3ad-7b91-8f56-2780e2a467b7",
 					},
 				},
 				
@@ -3369,14 +3355,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "end reaction timer",
-							uuid = "bfc16168-eda7-776e-9e5b-8f60a65582be",
+							name = "Target Timer",
+							uuid = "217429ae-72f8-a03f-b326-4b07dcf4eaf4",
 							version = 2,
 						},
-						inheritedObjectUUID = "f52fcb09-9460-e051-9463-25c8bb0be180",
-						inheritedOverwrites = 
-						{
-						},
+						inheritedObjectUUID = "74431404-7272-3011-892b-18db2e4fa1a5",
 					},
 				},
 				
@@ -3386,14 +3369,11 @@ local tbl =
 					{
 						data = 
 						{
-							name = "target boss timer",
-							uuid = "1cb0ba3e-7a9e-d702-baab-e9e5bd108c17",
+							name = "Scholar",
+							uuid = "526a9349-a36c-5504-a7ec-42b96418f9d2",
 							version = 2,
 						},
-						inheritedObjectUUID = "4838a5f2-e6ec-e56e-a71c-d5c8620b5353",
-						inheritedOverwrites = 
-						{
-						},
+						inheritedObjectUUID = "e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
 					},
 				},
 				
@@ -3403,52 +3383,18 @@ local tbl =
 					{
 						data = 
 						{
-							name = "is countdown cancelled",
-							uuid = "db3b385c-a6b1-8193-befd-89ed6060b14c",
+							name = "Check BotRunning",
+							uuid = "39956a33-2940-b0df-9675-ae06cba45d98",
 							version = 2,
 						},
-						inheritedObjectUUID = "50124129-980a-3a46-b291-5a37b9f25ce2",
-						inheritedOverwrites = 
-						{
-						},
-					},
-				},
-				
-				{
-					type = "remove",
-					value = 
-					{
-						data = 
-						{
-							name = "pot timer",
-							uuid = "82126e84-1856-9d67-84fc-6bb44dcecfee",
-							version = 2,
-						},
-						inheritedObjectUUID = "158de54e-eb59-5356-ba1d-09ae0a4755b8",
-						inheritedOverwrites = 
-						{
-						},
-					},
-				},
-				
-				{
-					type = "remove",
-					value = 
-					{
-						data = 
-						{
-							name = "malefic timer",
-							uuid = "c5e7e0b4-916c-5e66-8f80-ab492935b7fd",
-							version = 2,
-						},
-						inheritedObjectUUID = "a962d9e7-4b65-edcd-9471-ef375fc9f1d2",
+						inheritedObjectUUID = "4a7db5d9-954b-bac7-9064-bbd7166b5052",
 						inheritedOverwrites = 
 						{
 						},
 					},
 				},
 			},
-			enabled = true,
+			enabled = false,
 			name = "n/a",
 		},
 	}, 

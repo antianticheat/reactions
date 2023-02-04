@@ -68,51 +68,213 @@ local tbl =
 	{
 		data = 
 		{
-			name = "Prepull Helper",
-			uuid = "4555a084-8304-5ed2-9eba-b620f8372c0a",
-			version = 2,
-		},
-		inheritedObjectUUID = "dcec4734-df1d-e575-90af-afd363c2a735",
-		inheritedOverwrites = 
-		{
 			actions = 
 			{
 				
 				{
-					type = "add",
-					value = 
+					data = 
 					{
-						data = 
+						aType = "Lua",
+						actionLua = "d(\"[AnyoneCore] Countdown started - engaging Prepull Helper.\")\nAnyoneCore.Data.countdownTime = Now()\nAnyoneCore.Data.countdownDuration = tonumber(eventArgs.time)\ndata.startCombat = gStartCombat\ngStartCombat = false\nAnyoneCore.JobCheck()\nif AnyoneCore.Settings.PrepullHelper.twominpot == true and ACR_RikuWHM2_Potion == true then\n    AnyoneCore.Data.PotsEnabled = true\n    ACR_RikuWHM2_Potion = false\n    AnyoneCore.Toggle(\"pots\", false, (30000 + eventArgs.time))\nend\nlocal ac = ActionList:Get(1, 119)\ndata.castTime = ac.casttime\nself.used = true",
+						conditions = 
 						{
-							name = "cancel prepull helper",
-							uuid = "cf5d77c9-441e-158b-a74b-f9a92a68a115",
-							version = 2,
-						},
-						inheritedObjectUUID = "451a1cc6-ace3-1170-96e9-aeff38c3affb",
-						inheritedOverwrites = 
-						{
-							conditions = 
+							
 							{
-								
-								{
-									type = "remove",
-									value = 
-									{
-										"50124129-980a-3a46-b291-5a37b9f25ce2",
-										true,
-									},
-								},
-								
-								{
-									type = "add",
-									value = 
-									{
-										"979de1fd-6b74-f449-9106-6d0c5c66619c",
-										true,
-									},
-								},
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
 							},
 						},
+						name = "Set Variables",
+						uuid = "8ceba036-70b3-14a9-8147-e299a38d5ccd",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Misc",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"9800e5e3-62bd-2bae-80e6-d383ad124aec",
+								true,
+							},
+						},
+						name = "Target Nearest",
+						setTarget = true,
+						targetType = "Enemy",
+						uuid = "ad3c6f9c-68b3-dd49-844f-28b4f9aca282",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Misc",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"4d99bb4c-c4e3-ffa8-8ef9-3986149fe367",
+								true,
+							},
+							
+							{
+								"e6471513-bfa1-e742-b9b1-e00178af95b2",
+								true,
+							},
+						},
+						ignoreWeaveRules = true,
+						potType = 3,
+						usePot = true,
+						uuid = "d866e92f-6633-4656-8b99-fbd68459e767",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						actionID = 119,
+						atomicPriority = true,
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"de7d078f-d3ad-7b91-8f56-2780e2a467b7",
+								true,
+							},
+						},
+						ignoreWeaveRules = true,
+						targetType = "Current Target",
+						uuid = "c57036ed-3b36-a78b-898e-32119d4b1446",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Misc",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"f29b914f-cece-d670-b855-f37856f50c03",
+								true,
+							},
+						},
+						name = "Target Nearest",
+						setTarget = true,
+						targetType = "Enemy",
+						uuid = "d74a784f-c225-fd1e-bd26-938e349d5f8a",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "gStartCombat = true\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"f29b914f-cece-d670-b855-f37856f50c03",
+								true,
+							},
+						},
+						name = "Engage",
+						uuid = "d763d3f0-694b-230a-853e-18910819588e",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "d(\"[AnyoneCore] Countdown finished, engaging boss.\")\ngStartCombat = data.startCombat\nAnyoneCore.Data.countdownTime = nil\nAnyoneCore.Data.countdownDuration = nil\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"4a7db5d9-954b-bac7-9064-bbd7166b5052",
+								true,
+							},
+							
+							{
+								"e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+								true,
+							},
+							
+							{
+								"d880da65-e049-0e94-b956-f1df2e89d4ac",
+								true,
+							},
+						},
+						name = "End",
+						uuid = "203d44e2-1376-992c-b272-b19fb620f602",
+						version = 2,
 					},
 				},
 			},
@@ -120,39 +282,133 @@ local tbl =
 			{
 				
 				{
-					type = "remove",
-					value = 
+					data = 
 					{
-						data = 
-						{
-							name = "is countdown cancelled",
-							uuid = "32b04a46-1fb8-47ab-8cdd-76e253d7aa7a",
-							version = 2,
-						},
-						inheritedObjectUUID = "50124129-980a-3a46-b291-5a37b9f25ce2",
-						inheritedOverwrites = 
-						{
-						},
+						category = "Lua",
+						conditionLua = "return FFXIV_Common_BotRunning and AnyoneCore.Settings.PrepullHelper.enabled",
+						name = "Check BotRunning",
+						uuid = "4a7db5d9-954b-bac7-9064-bbd7166b5052",
+						version = 2,
 					},
 				},
 				
 				{
-					position = 6,
-					type = "add",
-					value = 
+					data = 
 					{
-						data = 
-						{
-							category = "Lua",
-							conditionLua = "local line = eventArgs.line.line\nfor k,v in pairs(AnyoneCore.countdowncancel) do\n    if line:match(v) then\n        return true\n    end\nend\nreturn false",
-							name = "is countdown canceled",
-							uuid = "979de1fd-6b74-f449-9106-6d0c5c66619c",
-							version = 2,
-						},
-						inheritedIndex = 6,
+						category = "Self",
+						conditionType = 13,
+						dequeueIfLuaFalse = true,
+						jobValue = "WHITEMAGE",
+						name = "White Mage",
+						uuid = "e8de0f77-e6e5-93fb-9d52-61c81a36ac84",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 3,
+						name = "Pot Timer",
+						uuid = "4d99bb4c-c4e3-ffa8-8ef9-3986149fe367",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return ACR_RikuWHM2_Potion == true",
+						name = "Pot Enabled",
+						uuid = "e6471513-bfa1-e742-b9b1-e00178af95b2",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 2,
+						name = "Target Timer",
+						uuid = "9800e5e3-62bd-2bae-80e6-d383ad124aec",
+						version = 2,
+					},
+					inheritedIndex = 5,
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 1.7000000476837,
+						name = "Glare Timer",
+						uuid = "de7d078f-d3ad-7b91-8f56-2780e2a467b7",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						eventCountdownTime = 0.5,
+						name = "Engage Boss Timer",
+						uuid = "f29b914f-cece-d670-b855-f37856f50c03",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						category = "Event",
+						comparator = 2,
+						name = "End Timer",
+						uuid = "d880da65-e049-0e94-b956-f1df2e89d4ac",
+						version = 2,
 					},
 				},
 			},
+			eventType = 16,
+			name = "Prepull Helper",
+			uuid = "56843b9f-36f8-b8ce-80b5-fc004877de18",
+			version = 2,
+		},
+		inheritedIndex = 24,
+	},
+	
+	{
+		data = 
+		{
+			name = "OnDeath Reaction",
+			uuid = "00070a08-e995-5923-a622-c8aca0e79d8a",
+			version = 2,
+		},
+		inheritedIndex = 26,
+		inheritedObjectUUID = "5b15d2e7-a953-542c-b3c3-945c374dd5d1",
+		inheritedOverwrites = 
+		{
+		},
+	},
+	
+	{
+		data = 
+		{
+			name = "--Duty Helper",
+			uuid = "d1160378-3281-93a4-922e-6425a66ab2be",
+			version = 2,
+		},
+		inheritedIndex = 27,
+		inheritedObjectUUID = "3252e059-b557-925d-a580-d94313de83d4",
+		inheritedOverwrites = 
+		{
 		},
 	},
 	
@@ -333,12 +589,12 @@ local tbl =
 			},
 			eventType = 3,
 			name = "Duty Helper",
-			throttleTime = 1000,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "f6e8ed27-6412-4cc9-ab1a-1cebece7cb27",
 			version = 2,
 		},
-		inheritedIndex = 20,
+		inheritedIndex = 28,
 	},
 	
 	{
@@ -348,6 +604,7 @@ local tbl =
 			uuid = "62815923-9540-1e5e-8ad5-18ef1047f6af",
 			version = 2,
 		},
+		inheritedIndex = 29,
 		inheritedObjectUUID = "99232b2f-f076-00e3-92a0-3738aaba1ce6",
 		inheritedOverwrites = 
 		{
@@ -386,11 +643,12 @@ local tbl =
 			conditions = 
 			{
 			},
-			name = "-eels",
+			enabled = false,
+			name = "--Auto-healing",
 			uuid = "7b2f2228-75ba-4851-b497-2052cbbf1ea1",
 			version = 2,
 		},
-		inheritedIndex = 33,
+		inheritedIndex = 30,
 	},
 	
 	{
@@ -418,11 +676,6 @@ local tbl =
 							
 							{
 								"0da9f25b-c714-4d09-ae62-be262805c0e8",
-								true,
-							},
-							
-							{
-								"69784c75-865f-114a-a91d-821e653cbede",
 								true,
 							},
 							
@@ -461,11 +714,6 @@ local tbl =
 							
 							{
 								"f96f6af8-4458-152b-a96c-e31b2b454ba2",
-								true,
-							},
-							
-							{
-								"5ca72a84-937c-28e2-b803-b51e3f838d4f",
 								true,
 							},
 							
@@ -529,7 +777,6 @@ local tbl =
 							},
 						},
 						endIfUsed = true,
-						fallthrough = true,
 						gVar = "ACR_RikuWHM2_Healbar_PlenaryIndulgence",
 						uuid = "2f2fe793-b93c-0ed6-aa4a-b2fbd6667a38",
 						variableTogglesType = 3,
@@ -558,11 +805,6 @@ local tbl =
 							
 							{
 								"c8ec7363-05cf-056e-a860-efa731153cfd",
-								true,
-							},
-							
-							{
-								"fa077e55-a48f-bd33-8518-ffa092edb97f",
 								true,
 							},
 							
@@ -2004,330 +2246,12 @@ local tbl =
 				},
 			},
 			name = "Heal",
-			throttleTime = 1000,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "3e8084a8-2080-bca0-a3f7-d7ed2c5d60fe",
 			version = 2,
 		},
-		inheritedIndex = 34,
-	},
-	
-	{
-		data = 
-		{
-			actions = 
-			{
-				
-				{
-					data = 
-					{
-						aType = "Variable",
-						actionID = 7432,
-						conditions = 
-						{
-							
-							{
-								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
-								true,
-							},
-							
-							{
-								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
-								true,
-							},
-							
-							{
-								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
-								true,
-							},
-							
-							{
-								"7b244a9e-bf7a-f101-8274-592981ff44f5",
-								true,
-							},
-							
-							{
-								"73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
-								true,
-							},
-							
-							{
-								"39086399-cc48-b7e3-80a3-393a5e4cdbc1",
-								true,
-							},
-						},
-						endIfUsed = true,
-						fallthrough = true,
-						gVar = "ACR_RikuWHM2_Healbar_DivineBenison",
-						ignoreWeaveRules = true,
-						targetType = "Main Tank",
-						uuid = "30f4dac6-e046-b19d-80b2-5f53b426cad3",
-						variableIsHover = true,
-						variableTogglesType = 3,
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Variable",
-						actionID = 25861,
-						conditions = 
-						{
-							
-							{
-								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
-								true,
-							},
-							
-							{
-								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
-								true,
-							},
-							
-							{
-								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
-								true,
-							},
-							
-							{
-								"e322e744-6977-0886-83ae-42fbddaa5313",
-								true,
-							},
-							
-							{
-								"9353792e-b7b2-a516-8e36-741beee21def",
-								true,
-							},
-						},
-						endIfUsed = true,
-						gVar = "ACR_RikuWHM2_Healbar_AquaveilMouse",
-						ignoreWeaveRules = true,
-						targetType = "Main Tank",
-						uuid = "ad3516d7-8705-ef87-a3d1-fa56a83cd83b",
-						variableIsHover = true,
-						variableTogglesType = 3,
-						version = 2,
-					},
-					inheritedIndex = 2,
-				},
-				
-				{
-					data = 
-					{
-						aType = "Variable",
-						actionID = 7432,
-						conditions = 
-						{
-							
-							{
-								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
-								true,
-							},
-							
-							{
-								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
-								true,
-							},
-							
-							{
-								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
-								true,
-							},
-							
-							{
-								"e322e744-6977-0886-83ae-42fbddaa5313",
-								true,
-							},
-							
-							{
-								"73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
-								true,
-							},
-							
-							{
-								"39086399-cc48-b7e3-80a3-393a5e4cdbc1",
-								true,
-							},
-						},
-						fallthrough = true,
-						gVar = "ACR_RikuWHM2_Healbar_DivineBenison",
-						ignoreWeaveRules = true,
-						targetType = "Main Tank",
-						uuid = "3116f291-e346-86b1-99f1-c3a5135df6a0",
-						variableIsHover = true,
-						variableTogglesType = 3,
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						aType = "Variable",
-						actionID = 25861,
-						conditions = 
-						{
-							
-							{
-								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
-								true,
-							},
-							
-							{
-								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
-								true,
-							},
-							
-							{
-								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
-								true,
-							},
-							
-							{
-								"e322e744-6977-0886-83ae-42fbddaa5313",
-								true,
-							},
-							
-							{
-								"9353792e-b7b2-a516-8e36-741beee21def",
-								true,
-							},
-						},
-						endIfUsed = true,
-						gVar = "ACR_RikuWHM2_Healbar_AquaveilMouse",
-						ignoreWeaveRules = true,
-						targetType = "Main Tank",
-						uuid = "59a66515-7820-c779-9535-9d292137f575",
-						variableIsHover = true,
-						variableTogglesType = 3,
-						version = 2,
-					},
-				},
-			},
-			conditions = 
-			{
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return AnyoneCore.assistCallback()",
-						dequeueIfLuaFalse = true,
-						name = "bot is running",
-						uuid = "1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
-						version = 2,
-					},
-					inheritedIndex = 1,
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return Leta.settings.Toggles[\"Mitigation\"].bool",
-						dequeueIfLuaFalse = true,
-						name = "Toggle Mitigation",
-						uuid = "6eb3a79b-063c-b185-9f01-797e8f1307b1",
-						version = 2,
-					},
-					inheritedIndex = 3,
-				},
-				
-				{
-					data = 
-					{
-						category = "Lua",
-						conditionLua = "return Leta.settings.Toggles[\"Heal\"].bool",
-						dequeueIfLuaFalse = true,
-						name = "Toggle Heal",
-						uuid = "3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
-						version = 2,
-					},
-					inheritedIndex = 4,
-				},
-				
-				{
-					data = 
-					{
-						channelCheckSpellIDList = 
-						{
-							26126,
-							26153,
-						},
-						channelCheckType = 2,
-						conditionType = 7,
-						dequeueIfLuaFalse = true,
-						eventArgType = 2,
-						uuid = "7b244a9e-bf7a-f101-8274-592981ff44f5",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						channelCheckSpellIDList = 
-						{
-							26127,
-							26674,
-						},
-						channelCheckType = 2,
-						conditionType = 7,
-						dequeueIfLuaFalse = true,
-						uuid = "e322e744-6977-0886-83ae-42fbddaa5313",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						buffCheckType = 2,
-						buffID = 1218,
-						category = "Party",
-						partyTargetType = "Main Tank",
-						uuid = "73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						actionCDValue = 30,
-						actionID = 7432,
-						category = "Self",
-						comparator = 2,
-						conditionType = 4,
-						name = "CD - Benison <= 30s",
-						uuid = "39086399-cc48-b7e3-80a3-393a5e4cdbc1",
-						version = 2,
-					},
-				},
-				
-				{
-					data = 
-					{
-						actionID = 25861,
-						category = "Self",
-						comparator = 2,
-						conditionType = 4,
-						name = "CD - Aquaveil <= 0s",
-						uuid = "9353792e-b7b2-a516-8e36-741beee21def",
-						version = 2,
-					},
-				},
-			},
-			eventType = 3,
-			name = "Tankbusters",
-			throttleTime = 1000,
-			timeout = 3,
-			uuid = "e53fb64c-27d7-5825-b6ed-7d69e5d1e97b",
-			version = 2,
-		},
-		inheritedIndex = 24,
+		inheritedIndex = 31,
 	},
 	
 	{
@@ -2507,12 +2431,331 @@ local tbl =
 				},
 			},
 			name = "Esuna",
-			throttleTime = 1200,
+			throttleTime = 1250,
 			timeout = 3,
 			uuid = "9548b568-fd42-791b-a2a7-6b9a4ed1b608",
 			version = 2,
 		},
-		inheritedIndex = 35,
+		inheritedIndex = 32,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Variable",
+						actionID = 7432,
+						conditions = 
+						{
+							
+							{
+								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
+								true,
+							},
+							
+							{
+								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
+								true,
+							},
+							
+							{
+								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
+								true,
+							},
+							
+							{
+								"7b244a9e-bf7a-f101-8274-592981ff44f5",
+								true,
+							},
+							
+							{
+								"73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
+								true,
+							},
+							
+							{
+								"39086399-cc48-b7e3-80a3-393a5e4cdbc1",
+								true,
+							},
+						},
+						endIfUsed = true,
+						fallthrough = true,
+						gVar = "ACR_RikuWHM2_Healbar_DivineBenison",
+						ignoreWeaveRules = true,
+						targetType = "Main Tank",
+						uuid = "30f4dac6-e046-b19d-80b2-5f53b426cad3",
+						variableIsHover = true,
+						variableTogglesType = 3,
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Variable",
+						actionID = 25861,
+						conditions = 
+						{
+							
+							{
+								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
+								true,
+							},
+							
+							{
+								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
+								true,
+							},
+							
+							{
+								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
+								true,
+							},
+							
+							{
+								"e322e744-6977-0886-83ae-42fbddaa5313",
+								true,
+							},
+							
+							{
+								"9353792e-b7b2-a516-8e36-741beee21def",
+								true,
+							},
+						},
+						endIfUsed = true,
+						gVar = "ACR_RikuWHM2_Healbar_AquaveilMouse",
+						ignoreWeaveRules = true,
+						targetType = "Main Tank",
+						uuid = "ad3516d7-8705-ef87-a3d1-fa56a83cd83b",
+						variableIsHover = true,
+						variableTogglesType = 3,
+						version = 2,
+					},
+					inheritedIndex = 2,
+				},
+				
+				{
+					data = 
+					{
+						aType = "Variable",
+						actionID = 7432,
+						conditions = 
+						{
+							
+							{
+								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
+								true,
+							},
+							
+							{
+								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
+								true,
+							},
+							
+							{
+								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
+								true,
+							},
+							
+							{
+								"e322e744-6977-0886-83ae-42fbddaa5313",
+								true,
+							},
+							
+							{
+								"73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
+								true,
+							},
+							
+							{
+								"39086399-cc48-b7e3-80a3-393a5e4cdbc1",
+								true,
+							},
+						},
+						endIfUsed = true,
+						fallthrough = true,
+						gVar = "ACR_RikuWHM2_Healbar_DivineBenison",
+						ignoreWeaveRules = true,
+						targetType = "Main Tank",
+						uuid = "3116f291-e346-86b1-99f1-c3a5135df6a0",
+						variableIsHover = true,
+						variableTogglesType = 3,
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						aType = "Variable",
+						actionID = 25861,
+						conditions = 
+						{
+							
+							{
+								"1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
+								true,
+							},
+							
+							{
+								"6eb3a79b-063c-b185-9f01-797e8f1307b1",
+								true,
+							},
+							
+							{
+								"3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
+								true,
+							},
+							
+							{
+								"e322e744-6977-0886-83ae-42fbddaa5313",
+								true,
+							},
+							
+							{
+								"9353792e-b7b2-a516-8e36-741beee21def",
+								true,
+							},
+						},
+						endIfUsed = true,
+						gVar = "ACR_RikuWHM2_Healbar_AquaveilMouse",
+						ignoreWeaveRules = true,
+						targetType = "Main Tank",
+						uuid = "59a66515-7820-c779-9535-9d292137f575",
+						variableIsHover = true,
+						variableTogglesType = 3,
+						version = 2,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return AnyoneCore.assistCallback()",
+						dequeueIfLuaFalse = true,
+						name = "bot is running",
+						uuid = "1debcc56-5de9-4ac9-acf5-9b0fd2b2a67f",
+						version = 2,
+					},
+					inheritedIndex = 1,
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return Leta.settings.Toggles[\"Mitigation\"].bool",
+						dequeueIfLuaFalse = true,
+						name = "Toggle Mitigation",
+						uuid = "6eb3a79b-063c-b185-9f01-797e8f1307b1",
+						version = 2,
+					},
+					inheritedIndex = 3,
+				},
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return Leta.settings.Toggles[\"Heal\"].bool",
+						dequeueIfLuaFalse = true,
+						name = "Toggle Heal",
+						uuid = "3ca0ecf8-ad2e-3ce5-9320-c903fe63b918",
+						version = 2,
+					},
+					inheritedIndex = 4,
+				},
+				
+				{
+					data = 
+					{
+						channelCheckSpellIDList = 
+						{
+							26126,
+							26153,
+						},
+						channelCheckType = 2,
+						conditionType = 7,
+						dequeueIfLuaFalse = true,
+						eventArgType = 2,
+						uuid = "7b244a9e-bf7a-f101-8274-592981ff44f5",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						channelCheckSpellIDList = 
+						{
+							26127,
+							26674,
+						},
+						channelCheckType = 2,
+						conditionType = 7,
+						dequeueIfLuaFalse = true,
+						uuid = "e322e744-6977-0886-83ae-42fbddaa5313",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						buffCheckType = 2,
+						buffID = 1218,
+						category = "Party",
+						partyTargetType = "Main Tank",
+						uuid = "73fbdb86-eb4d-fd59-bbb5-7ef1b876d19c",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						actionCDValue = 30,
+						actionID = 7432,
+						category = "Self",
+						comparator = 2,
+						conditionType = 4,
+						name = "CD - Benison <= 30s",
+						uuid = "39086399-cc48-b7e3-80a3-393a5e4cdbc1",
+						version = 2,
+					},
+				},
+				
+				{
+					data = 
+					{
+						actionID = 25861,
+						category = "Self",
+						comparator = 2,
+						conditionType = 4,
+						name = "CD - Aquaveil <= 0s",
+						uuid = "9353792e-b7b2-a516-8e36-741beee21def",
+						version = 2,
+					},
+				},
+			},
+			eventType = 3,
+			name = "Tankbusters",
+			throttleTime = 1250,
+			timeout = 3,
+			uuid = "e53fb64c-27d7-5825-b6ed-7d69e5d1e97b",
+			version = 2,
+		},
+		inheritedIndex = 33,
 	},
 	
 	{
@@ -2525,7 +2768,7 @@ local tbl =
 					data = 
 					{
 						aType = "Lua",
-						actionLua = "if Leta == nil then\n    Leta = {}\nend\nif Leta.init ~= true then\n    Leta.lastTick = Now()\n\n    Leta.GUI = {\n        open = false,\n        visible = false\n    }\n    Leta.settings = {\n        LockedToggles = false,\n        Toggles = {\n            --global\n            [\"AOE\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"ST\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"GCD\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Esuna\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Mitigation\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Heal\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            --whm\n            [\"Asylum\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Bell\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Benediction\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"Temperance\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"HOT\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            --sage\n            [\"Haima\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Panhaima\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            [\"Pneuma\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Zoe\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Soteria\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            -- AST\n            [\"Macrocosmos\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"Neutral Sect\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Synastry\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Earthly Star\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"HoT\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Horoscope\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            --SCH\n            [\"Expedient\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Illumination\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Seraph\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"D Tactics\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Sacred Soil\"] = {bool = false, shown = true, group = 1, job = \"SCH\"}\n        }\n    }\n\n    Leta.ModToKey = {\n        [\"SHIFT\"] = 16,\n        [\"CONTROL\"] = 17,\n        [\"ALT\"] = 18\n    }\n    Leta.JobTable = {\n        [6] = \"WHM\",\n        [24] = \"WHM\",\n        [28] = \"SCH\",\n        [26] = \"SCH\",\n        [33] = \"AST\",\n        [40] = \"SGE\"\n    }\n\n    Leta.LuaPath = GetLuaModsPath()\n    Leta.SettingsPath = Leta.LuaPath .. [[ffxivminion\\leta\\]]\n    Leta.SettingsFile = Leta.SettingsPath .. [[Settings.lua]]\n    local v = table.valid\n    function Leta.valid(...)\n        local tbl = {...}\n        local size = #tbl\n        if size > 0 then\n            local count = tbl[1]\n            if type(count) == \"number\" then\n                if size == (count + 1) then\n                    for i = 2, size do\n                        if not v(tbl[i]) then\n                            return false\n                        end\n                    end\n                    return true\n                end\n            else\n                for i = 1, size do\n                    if not v(tbl[i]) then\n                        return false\n                    end\n                end\n                return true\n            end\n        end\n        return false\n    end\n    local valid = Leta.valid\n\n    function Leta.LoadSettings()\n        if (not FolderExists(Leta.SettingsPath)) then\n            FolderCreate(Leta.SettingsPath)\n        end\n        local tbl = FileLoad(Leta.SettingsFile)\n        local function scan(tbl, tbl2, depth)\n            depth = depth or 0\n            if valid(2, tbl, tbl2) then\n                for k, v in pairs(tbl2) do\n                    if type(v) == \"table\" then\n                        if tbl[k] and valid(tbl[k]) then\n                            tbl[k] = table.merge(tbl[k], scan(tbl[k], v, depth + 1))\n                        else\n                            tbl[k] = v\n                        end\n                    else\n                        if tbl[k] ~= tbl2[k] then\n                            tbl[k] = tbl2[k]\n                        end\n                    end\n                end\n            end\n            return tbl\n        end\n        Leta.settings = scan(Leta.settings, tbl)\n    end\n\n    function Leta.SaveSettings()\n        d(\"[Leta] Settings saved\")\n        if not table.deepcompare(Leta.settings, PreviousSave) then\n            if (not FolderExists(Leta.SettingsPath)) then\n                FolderCreate(Leta.SettingsPath)\n            end\n\n            FileSave(Leta.SettingsFile, Leta.settings)\n            PreviousSave = table.deepcopy(Leta.settings)\n        end\n    end\n    Leta.LoadSettings()\n    Leta.init = true\nend\nself.used = true\n",
+						actionLua = "if Leta == nil then\n    Leta = {}\nend\nif Leta.init ~= true then\n    Leta.lastTick = Now()\n\n    Leta.GUI = {\n        open = false,\n        visible = false\n    }\n    Leta.settings = {\n        LockedToggles = false,\n        Toggles = {\n            --global\n            [\"AOE\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"ST\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"GCD\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Esuna\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Mitigation\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            [\"Heal\"] = {bool = true, shown = true, group = 2, job = \"global\"},\n            --whm\n            [\"Asylum\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Bell\"] = {bool = false, shown = true, group = 1, job = \"WHM\"},\n            [\"Benediction\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"Temperance\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\n            [\"HOT\"] = {bool = true, shown = true, group = 1, job = \"WHM\"},\t\t\t\t\t\t\t\t\t\t\t\t\n            --sage\n            [\"Haima\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Panhaima\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            [\"Pneuma\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n            [\"Zoe\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Soteria\"] = {bool = true, shown = true, group = 1, job = \"SGE\"},\n\t\t\t\t\t\t\t\t\t\t\t\t[\"Pneuma Opener\"] = {bool = false, shown = true, group = 1, job = \"SGE\"},\n            -- AST\n            [\"Macrocosmos\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"Neutral Sect\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Synastry\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Earthly Star\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            [\"HoT\"] = {bool = true, shown = true, group = 1, job = \"AST\"},\n            [\"Horoscope\"] = {bool = false, shown = true, group = 1, job = \"AST\"},\n            --SCH\n            [\"Expedient\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Illumination\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Seraph\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"D Tactics\"] = {bool = true, shown = true, group = 1, job = \"SCH\"},\n            [\"Sacred Soil\"] = {bool = false, shown = true, group = 1, job = \"SCH\"},\n        }\n    }\n\n    Leta.ModToKey = {\n        [\"SHIFT\"] = 16,\n        [\"CONTROL\"] = 17,\n        [\"ALT\"] = 18\n    }\n    Leta.JobTable = {\n        [6] = \"WHM\",\n        [24] = \"WHM\",\n        [28] = \"SCH\",\n        [26] = \"SCH\",\n        [33] = \"AST\",\n        [40] = \"SGE\"\n    }\n\n    Leta.LuaPath = GetLuaModsPath()\n    Leta.SettingsPath = Leta.LuaPath .. [[ffxivminion\\leta\\]]\n    Leta.SettingsFile = Leta.SettingsPath .. [[Settings.lua]]\n    local v = table.valid\n    function Leta.valid(...)\n        local tbl = {...}\n        local size = #tbl\n        if size > 0 then\n            local count = tbl[1]\n            if type(count) == \"number\" then\n                if size == (count + 1) then\n                    for i = 2, size do\n                        if not v(tbl[i]) then\n                            return false\n                        end\n                    end\n                    return true\n                end\n            else\n                for i = 1, size do\n                    if not v(tbl[i]) then\n                        return false\n                    end\n                end\n                return true\n            end\n        end\n        return false\n    end\n    local valid = Leta.valid\n\n    function Leta.LoadSettings()\n        if (not FolderExists(Leta.SettingsPath)) then\n            FolderCreate(Leta.SettingsPath)\n        end\n        local tbl = FileLoad(Leta.SettingsFile)\n        local function scan(tbl, tbl2, depth)\n            depth = depth or 0\n            if valid(2, tbl, tbl2) then\n                for k, v in pairs(tbl2) do\n                    if type(v) == \"table\" then\n                        if tbl[k] and valid(tbl[k]) then\n                            tbl[k] = table.merge(tbl[k], scan(tbl[k], v, depth + 1))\n                        else\n                            tbl[k] = v\n                        end\n                    else\n                        if tbl[k] ~= tbl2[k] then\n                            tbl[k] = tbl2[k]\n                        end\n                    end\n                end\n            end\n            return tbl\n        end\n        Leta.settings = scan(Leta.settings, tbl)\n    end\n\n    function Leta.SaveSettings()\n        d(\"[Leta] Settings saved\")\n        if not table.deepcompare(Leta.settings, PreviousSave) then\n            if (not FolderExists(Leta.SettingsPath)) then\n                FolderCreate(Leta.SettingsPath)\n            end\n\n            FileSave(Leta.SettingsFile, Leta.settings)\n            PreviousSave = table.deepcopy(Leta.settings)\n        end\n    end\n    Leta.LoadSettings()\n    Leta.init = true\nend\nself.used = true",
 						conditions = 
 						{
 							
@@ -2617,7 +2860,7 @@ local tbl =
 			uuid = "77ba1ec9-aafa-84b4-b759-a409c68d6ade",
 			version = 2,
 		},
-		inheritedIndex = 26,
+		inheritedIndex = 34,
 	},
 	
 	{
@@ -2630,11 +2873,328 @@ local tbl =
 			{
 			},
 			enabled = false,
-			name = "v5.2.2.6",
-			uuid = "45f46047-a0e0-51d4-adfb-770b4bfbfa8c",
+			name = "--Version Number",
+			uuid = "29b89457-b966-ea53-a080-ec75b4c87f4e",
 			version = 2,
 		},
-		inheritedIndex = 30,
+		inheritedIndex = 35,
+	},
+	
+	{
+		data = 
+		{
+			actions = 
+			{
+				
+				{
+					data = 
+					{
+						aType = "Lua",
+						actionLua = "letaVersion = \"5.2.4.9\"\nd(\"Leta's reactions \" .. letaVersion .. \" loaded.\")\nself.used = true",
+						conditions = 
+						{
+							
+							{
+								"8d72527b-8ee0-5fbf-b774-dfe95cd7dcac",
+								true,
+							},
+						},
+						uuid = "f96a0929-c656-8277-b4c0-8fe992e106c2",
+						version = 2,
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					data = 
+					{
+						category = "Lua",
+						conditionLua = "return letaVersion == nil",
+						dequeueIfLuaFalse = true,
+						uuid = "8d72527b-8ee0-5fbf-b774-dfe95cd7dcac",
+						version = 2,
+					},
+				},
+			},
+			name = "v5.2.4.9",
+			uuid = "9570df5c-4066-44ad-852c-c4c9993eca8f",
+			version = 2,
+		},
+		inheritedIndex = 36,
+	},
+	
+	{
+		data = 
+		{
+			name = "n/a",
+			uuid = "4555a084-8304-5ed2-9eba-b620f8372c0a",
+			version = 2,
+		},
+		inheritedIndex = 37,
+		inheritedObjectUUID = "dcec4734-df1d-e575-90af-afd363c2a735",
+		inheritedOverwrites = 
+		{
+			actions = 
+			{
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "cancel prepull helper",
+							uuid = "cf5d77c9-441e-158b-a74b-f9a92a68a115",
+							version = 2,
+						},
+						inheritedObjectUUID = "451a1cc6-ace3-1170-96e9-aeff38c3affb",
+						inheritedOverwrites = 
+						{
+							conditions = 
+							{
+								
+								{
+									type = "remove",
+									value = 
+									{
+										"50124129-980a-3a46-b291-5a37b9f25ce2",
+										true,
+									},
+								},
+								
+								{
+									type = "add",
+									value = 
+									{
+										"979de1fd-6b74-f449-9106-6d0c5c66619c",
+										true,
+									},
+								},
+							},
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "end reaction",
+							uuid = "cf944115-e2e4-32db-af73-2cfb2d8b8824",
+							version = 2,
+						},
+						inheritedObjectUUID = "dab7f400-ecf4-4294-a745-e2f7ac5a1b22",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "enable start combat",
+							uuid = "508f60d2-7cc3-8605-b12c-36bb840d1513",
+							version = 2,
+						},
+						inheritedObjectUUID = "acd6dbc0-16e7-981a-a0e6-d73faa863359",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "",
+							uuid = "f60c024b-a8d2-1fd4-97c3-3a3fdfcb08bd",
+							version = 2,
+						},
+						inheritedObjectUUID = "acd45248-dd1d-b683-829a-1a852efbb11c",
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "",
+							uuid = "64d1134c-b8d8-741e-ba07-08ff9151f730",
+							version = 2,
+						},
+						inheritedObjectUUID = "c5464876-939e-a612-99c9-88099e6a26a4",
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "target nearest",
+							uuid = "14c913c7-a5aa-4c6a-afd5-12e3e3f6e21a",
+							version = 2,
+						},
+						inheritedObjectUUID = "b0e66759-e311-9c80-a57f-2e93ff99d4d1",
+					},
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "is countdown cancelled",
+							uuid = "32b04a46-1fb8-47ab-8cdd-76e253d7aa7a",
+							version = 2,
+						},
+						inheritedObjectUUID = "50124129-980a-3a46-b291-5a37b9f25ce2",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "glare timer",
+							uuid = "8bdc2cb4-a3b9-2701-8aa8-c5bb21b2717d",
+							version = 2,
+						},
+						inheritedObjectUUID = "a962d9e7-4b65-edcd-9471-ef375fc9f1d2",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "pot timer",
+							uuid = "a5892f2b-5ec6-2362-9b90-6b7afb5a946d",
+							version = 2,
+						},
+						inheritedObjectUUID = "158de54e-eb59-5356-ba1d-09ae0a4755b8",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "target boss timer",
+							uuid = "d598d26d-4fd6-78c8-926d-6ce6edaacf82",
+							version = 2,
+						},
+						inheritedObjectUUID = "4838a5f2-e6ec-e56e-a71c-d5c8620b5353",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "end reaction timer",
+							uuid = "645a0c4a-ce08-2a62-8f74-7b43db5ed3c1",
+							version = 2,
+						},
+						inheritedObjectUUID = "f52fcb09-9460-e051-9463-25c8bb0be180",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "engage boss timer",
+							uuid = "50cba011-79e7-7fa5-a39c-5a716b43c2ba",
+							version = 2,
+						},
+						inheritedObjectUUID = "d6e5f76d-373f-5144-b6fa-a511c76c8e00",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "is countdown started",
+							uuid = "77d7b72f-9b5f-3fd4-af12-46507a6c5f44",
+							version = 2,
+						},
+						inheritedObjectUUID = "61dd99a6-dbfa-3c58-a34e-b3221c0c3ca5",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+				
+				{
+					type = "remove",
+					value = 
+					{
+						data = 
+						{
+							name = "is bot running",
+							uuid = "ab20c7d9-3a9e-2a3e-98d8-78d3ea2cc283",
+							version = 2,
+						},
+						inheritedObjectUUID = "f0635090-e89f-2ae2-844c-c7f30531ad49",
+						inheritedOverwrites = 
+						{
+						},
+					},
+				},
+			},
+			enabled = false,
+			name = "n/a",
+		},
 	}, 
 	inheritedProfiles = 
 	{
